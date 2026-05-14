@@ -32,3 +32,6 @@ data_dict = {'ID' : [100],
             'CITY' : ['Paris'],
             'CCODE' : ['FR']}
 data_append = pd.DataFrame(data_dict)
+
+data_append.to_sql(table_name, conn, if_exists = 'append', index =False)
+print('Data appended successfully')
