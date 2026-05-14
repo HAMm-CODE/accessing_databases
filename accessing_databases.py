@@ -20,3 +20,8 @@ query_statement = f"SELECT FNAME FROM {table_name}"
 query_output = pd.read_sql(query_statement, conn)
 print(query_statement)
 print(query_output)
+
+query_statement = f"SELECT COUNT(*) FROM {table_name}"
+query_output = pd.read_sql(query_statement, conn)
+print(query_statement)
+print(query_output)
