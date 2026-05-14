@@ -25,3 +25,10 @@ query_statement = f"SELECT COUNT(*) FROM {table_name}"
 query_output = pd.read_sql(query_statement, conn)
 print(query_statement)
 print(query_output)
+
+data_dict = {'ID' : [100],
+            'FNAME' : ['John'],
+            'LNAME' : ['Doe'],
+            'CITY' : ['Paris'],
+            'CCODE' : ['FR']}
+data_append = pd.DataFrame(data_dict)
