@@ -35,3 +35,8 @@ data_append = pd.DataFrame(data_dict)
 
 data_append.to_sql(table_name, conn, if_exists = 'append', index =False)
 print('Data appended successfully')
+
+query_statement = f"SELECT COUNT(*) FROM {table_name}"
+query_output = pd.read_sql(query_statement, conn)
+print(query_statement)
+print(query_output)
